@@ -346,3 +346,204 @@
   .dragon-card-header { padding: 20px 18px 20px 36px; }
   .dragon-card-body-inner { padding: 0 18px 22px 36px; }
 }
+
+/* ---------- scroll vein progress bar ---------- */
+.scroll-vein-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 100;
+}
+.scroll-vein-fill {
+  height: 100%;
+  background: var(--dragon-accent);
+  box-shadow: 0 0 10px 2px rgba(47, 217, 255, 0.8);
+  transition: width 0.1s linear;
+}
+
+/* ---------- ember field ---------- */
+.dragon-embers {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.dragon-ember {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 50%;
+  background: var(--dragon-accent2);
+  box-shadow: 0 0 8px 2px rgba(47, 217, 255, 0.7);
+  animation-name: ember-rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+@keyframes ember-rise {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  8% { opacity: 0.85; }
+  90% { opacity: 0.3; }
+  100% { transform: translateY(-900px) translateX(24px); opacity: 0; }
+}
+
+/* ---------- the hoard ---------- */
+.dragon-hoard-section {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+  margin: 0 auto 96px;
+  text-align: center;
+}
+.dragon-hoard-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+.dragon-hoard-item {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--dragon-border);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--dragon-accent) 10%, transparent), transparent);
+  color: var(--dragon-accent2);
+  font-size: 0.85rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.dragon-hoard-item:hover {
+  transform: translateY(-3px) scale(1.04);
+  border-color: var(--dragon-accent);
+  box-shadow: 0 0 14px rgba(47, 217, 255, 0.4);
+}
+
+/* ---------- origin timeline ---------- */
+.dragon-timeline-section {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto 96px;
+  text-align: center;
+}
+.dragon-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+  text-align: left;
+}
+.dragon-timeline::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dragon-accent), transparent);
+  opacity: 0.5;
+}
+.dragon-timeline-node { position: relative; padding-top: 26px; }
+.dragon-timeline-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dragon-accent);
+  box-shadow: 0 0 10px 3px rgba(47, 217, 255, 0.7);
+}
+.dragon-timeline-year {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dragon-accent);
+}
+.dragon-timeline-title {
+  font-family: "Cinzel", serif;
+  font-size: 1.05rem;
+  color: var(--dragon-accent2);
+  margin: 6px 0 8px;
+}
+.dragon-timeline-note {
+  font-size: 0.85rem;
+  color: var(--dragon-muted);
+  line-height: 1.6;
+}
+
+/* ---------- scattered insight badges ---------- */
+.dragon-project-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.dragon-insight {
+  position: relative;
+  margin: 0 8px;
+  padding: 18px 20px 18px 40px;
+  border-left: 2px solid var(--dragon-accent);
+  background: color-mix(in srgb, var(--dragon-accent) 5%, transparent);
+  border-radius: 0 12px 12px 0;
+}
+.dragon-insight-claw {
+  position: absolute;
+  top: 18px;
+  left: -9px;
+  width: 16px;
+  height: 16px;
+  border-left: 2px solid var(--dragon-accent);
+  border-bottom: 2px solid var(--dragon-accent);
+  transform: rotate(45deg);
+  box-shadow: -2px 2px 8px rgba(47, 217, 255, 0.5);
+}
+.dragon-insight-label {
+  display: block;
+  font-family: "Cinzel", serif;
+  font-size: 0.95rem;
+  color: var(--dragon-accent);
+  min-height: 1.3em;
+  margin-bottom: 6px;
+}
+.dragon-insight-text {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--dragon-muted);
+  margin: 0;
+}
+
+/* ---------- closing CTA ---------- */
+.dragon-cta {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  margin: 110px auto 0;
+  text-align: center;
+}
+.dragon-cta-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: 1px solid var(--dragon-accent);
+  color: var(--dragon-accent2);
+  background: color-mix(in srgb, var(--dragon-accent) 10%, transparent);
+  text-decoration: none;
+  font-size: 0.95rem;
+  animation: dragon-cta-pulse 3s ease-in-out infinite;
+}
+@keyframes dragon-cta-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(47, 217, 255, 0.35); }
+  50% { box-shadow: 0 0 26px rgba(47, 217, 255, 0.7); }
+}
+
+@media (max-width: 768px) {
+  .dragon-timeline { grid-template-columns: 1fr; }
+  .dragon-timeline::before { display: none; }
+}
