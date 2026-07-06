@@ -1,5 +1,3 @@
-/* it will have all the css for the pages */
-/* style for dragon */
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cinzel+Decorative:wght@700&display=swap");
 
 .dragon-page {
@@ -348,6 +346,3 @@
   .dragon-card-header { padding: 20px 18px 20px 36px; }
   .dragon-card-body-inner { padding: 0 18px 22px 36px; }
 }
-
-/* style for  robo*/
-/* style for human */
