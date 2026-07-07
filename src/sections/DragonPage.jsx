@@ -4,7 +4,7 @@ import { DragonInsight } from "@/components/DragonInsight";
 import { DragonHoard } from "@/components/DragonHoard";
 import { DragonTimeline } from "@/components/DragonTimeline";
 import { EmberField } from "@/components/EmberField";
-import { ScrollVein } from "@/components/ScrollVein";
+import { LightningFlicker } from "@/components/LightningFlicker";
 import { DragonCTA } from "@/components/DragonCTA";
 import "./dragon.css";
 
@@ -113,8 +113,6 @@ const insights = [
 export const DragonPage = () => {
   return (
     <div className="dragon-page">
-      <ScrollVein />
-
       {/* ambient layers behind everything */}
       <svg className="dragon-veins" viewBox="0 0 1200 1600" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0,80 L200,80 L240,140 L520,140 L560,60 L900,60" />
@@ -125,6 +123,7 @@ export const DragonPage = () => {
         <path d="M1200,1400 L980,1400 L940,1450 L620,1450" />
       </svg>
       <EmberField />
+      <LightningFlicker />
 
       <header className="dragon-hero">
         <div className="dragon-eyes">
