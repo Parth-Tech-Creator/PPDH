@@ -59,50 +59,6 @@ html, body, #root {
   margin: 0 auto 80px;
   text-align: center;
 }
-.dragon-eyes {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-.dragon-eye {
-  position: relative;
-  width: 46px;
-  height: 26px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, var(--dragon-accent2) 0%, var(--dragon-accent) 55%, #051820 100%);
-  box-shadow: 0 0 20px 4px rgba(47, 217, 255, 0.55), inset 0 0 8px rgba(0, 0, 0, 0.5);
-  animation: dragon-blink 5s infinite;
-}
-.dragon-eye::before {
-  content: "";
-  position: absolute;
-  top: -11px;
-  left: -6px;
-  width: 58px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--dragon-accent), transparent);
-  opacity: 0.55;
-  transform: rotate(-6deg);
-}
-.dragon-eye::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 5px;
-  height: 68%;
-  background: #010608;
-  border-radius: 3px;
-  transform: translate(-50%, -50%) rotate(6deg);
-}
-.dragon-eye:nth-child(2) { animation-delay: 0.15s; }
-@keyframes dragon-blink {
-  0%, 92%, 100% { transform: scaleY(1); }
-  94% { transform: scaleY(0.1); }
-  96% { transform: scaleY(1); }
-}
-
 .dragon-title {
   font-family: "Cinzel Decorative", serif;
   font-size: clamp(2.2rem, 5vw, 3.4rem);
@@ -697,4 +653,47 @@ html, body, #root {
 @media (max-width: 768px) {
   .dragon-timeline { grid-template-columns: 1fr; }
   .dragon-timeline::before { display: none; }
+}
+
+/* ---------- 3D eyes, fixed to viewport top ---------- */
+.dragon-eyes3d-header {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  pointer-events: none; /* clicks pass through to whatever's underneath */
+}
+.dragon-eyes3d-blink {
+  display: flex;
+  gap: 18px;
+  animation: dragon-eyes3d-blink 5s infinite;
+  transform-origin: center;
+}
+@keyframes dragon-eyes3d-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  94% { transform: scaleY(0.08); }
+  96% { transform: scaleY(1); }
+}
+.dragon-eye3d-slot {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.dragon-eye3d-slot::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(41, 184, 214, 0.35), transparent 70%);
+  filter: blur(8px);
+  z-index: -1;
+}
+.dragon-eye3d-canvas {
+  width: 100px;
+  height: 100px;
+  margin: -18px 0 0 -18px;
+  filter: hue-rotate(193deg) saturate(1.25) brightness(1.05);
+  clip-path: ellipse(42% 26% at 50% 50%);
+  -webkit-clip-path: ellipse(42% 26% at 50% 50%);
 }

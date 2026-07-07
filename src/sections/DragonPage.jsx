@@ -6,6 +6,7 @@ import { DragonTimeline } from "@/components/DragonTimeline";
 import { EmberField } from "@/components/EmberField";
 import { LightningFlicker } from "@/components/LightningFlicker";
 import { DragonCTA } from "@/components/DragonCTA";
+import { DragonEyesHeader } from "@/components/DragonEyesHeader";
 import "./dragon.css";
 
 // PolicyLens and Horizon are filled in with what's known — replace every
@@ -124,12 +125,9 @@ export const DragonPage = () => {
       </svg>
       <EmberField />
       <LightningFlicker />
+      <DragonEyesHeader />
 
       <header className="dragon-hero">
-        <div className="dragon-eyes">
-          <span className="dragon-eye" />
-          <span className="dragon-eye" />
-        </div>
         <DecodeText as="h1" glyphs={RUNIC} className="dragon-title" text="The Dragon Realm" />
         <p className="dragon-subtitle">
           Keeper of the biggest builds — the projects I'm proudest of, start to finish: the spark,
