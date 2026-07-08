@@ -2,11 +2,12 @@ import { DecodeText, RUNIC } from "@/components/DecodeText";
 import { DragonProjectCard } from "@/components/DragonProjectCard";
 import { DragonInsight } from "@/components/DragonInsight";
 import { DragonHoard } from "@/components/DragonHoard";
+import { DragonEyeFloating } from "@/components/DragonEyeFloating";
 import { DragonTimeline } from "@/components/DragonTimeline";
 import { EmberField } from "@/components/EmberField";
 import { LightningFlicker } from "@/components/LightningFlicker";
 import { DragonCTA } from "@/components/DragonCTA";
-import { DragonEyesHeader } from "@/components/DragonEyesHeader";
+import { DragonCircuitField } from "@/components/DragonCircuitField";
 import "./dragon.css";
 
 // PolicyLens and Horizon are filled in with what's known — replace every
@@ -125,7 +126,7 @@ export const DragonPage = () => {
       </svg>
       <EmberField />
       <LightningFlicker />
-      <DragonEyesHeader />
+      <DragonCircuitField />
 
       <header className="dragon-hero">
         <DecodeText as="h1" glyphs={RUNIC} className="dragon-title" text="The Dragon Realm" />
@@ -135,7 +136,10 @@ export const DragonPage = () => {
         </p>
       </header>
 
-      <DragonHoard />
+      <div className="dragon-hoard-with-eye">
+        <DragonEyeFloating />
+        <DragonHoard />
+      </div>
       <DragonTimeline />
 
       <section className="dragon-projects">

@@ -17,6 +17,8 @@ html, body, #root {
   --dragon-muted: #829299;
   --dragon-card: #0a1319;
   --dragon-border: #16262e;
+  --dragon-accent-purple: #9b6bd6;
+  --dragon-accent-yellow: #e8b84b;
 
   position: relative;
   min-height: 100vh;
@@ -43,9 +45,10 @@ html, body, #root {
   fill: none;
   animation: dragon-pulse 4s ease-in-out infinite;
 }
-.dragon-veins path:nth-child(2) { animation-delay: 1s; }
+.dragon-veins path:nth-child(2) { animation-delay: 1s; stroke: var(--dragon-accent-purple); }
 .dragon-veins path:nth-child(3) { animation-delay: 2s; }
-.dragon-veins path:nth-child(4) { animation-delay: 3s; }
+.dragon-veins path:nth-child(4) { animation-delay: 3s; stroke: var(--dragon-accent-yellow); }
+.dragon-veins path:nth-child(6) { stroke: var(--dragon-accent-purple); }
 @keyframes dragon-pulse {
   0%, 100% { stroke-opacity: 0.12; }
   50% { stroke-opacity: 0.7; }
@@ -55,7 +58,7 @@ html, body, #root {
 .dragon-hero {
   position: relative;
   z-index: 2;
-  max-width: 760px;
+  max-width: 860px;
   margin: 0 auto 80px;
   text-align: center;
 }
@@ -85,7 +88,7 @@ html, body, #root {
 .dragon-projects {
   position: relative;
   z-index: 2;
-  max-width: 820px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -350,7 +353,7 @@ html, body, #root {
 .dragon-personality {
   position: relative;
   z-index: 2;
-  max-width: 820px;
+  max-width: 900px;
   margin: 96px auto 0;
   text-align: center;
 }
@@ -455,7 +458,7 @@ html, body, #root {
 .dragon-hoard-section {
   position: relative;
   z-index: 2;
-  max-width: 820px;
+  max-width: 900px;
   margin: 0 auto 96px;
   text-align: center;
 }
@@ -499,7 +502,7 @@ html, body, #root {
 .dragon-timeline-section {
   position: relative;
   z-index: 2;
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto 96px;
   text-align: center;
 }
@@ -531,6 +534,14 @@ html, body, #root {
   border-radius: 50%;
   background: var(--dragon-accent);
   box-shadow: 0 0 10px 3px rgba(47, 217, 255, 0.7);
+}
+.dragon-timeline-node:nth-child(2) .dragon-timeline-dot {
+  background: var(--dragon-accent-purple);
+  box-shadow: 0 0 10px 3px rgba(155, 107, 214, 0.7);
+}
+.dragon-timeline-node:nth-child(3) .dragon-timeline-dot {
+  background: var(--dragon-accent-yellow);
+  box-shadow: 0 0 10px 3px rgba(232, 184, 75, 0.7);
 }
 .dragon-timeline-year {
   font-size: 0.7rem;
@@ -594,7 +605,7 @@ html, body, #root {
 .dragon-cta {
   position: relative;
   z-index: 2;
-  max-width: 640px;
+  max-width: 680px;
   margin: 110px auto 0;
   text-align: center;
 }
@@ -655,45 +666,83 @@ html, body, #root {
   .dragon-timeline::before { display: none; }
 }
 
-/* ---------- 3D eyes, fixed to viewport top ---------- */
-.dragon-eyes3d-header {
-  position: fixed;
-  top: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 60;
-  pointer-events: none; /* clicks pass through to whatever's underneath */
-}
-.dragon-eyes3d-blink {
-  display: flex;
-  gap: 18px;
-  animation: dragon-eyes3d-blink 5s infinite;
-  transform-origin: center;
-}
-@keyframes dragon-eyes3d-blink {
-  0%, 92%, 100% { transform: scaleY(1); }
-  94% { transform: scaleY(0.08); }
-  96% { transform: scaleY(1); }
-}
-.dragon-eye3d-slot {
-  position: relative;
-  width: 64px;
-  height: 64px;
-}
-.dragon-eye3d-slot::before {
-  content: "";
+
+
+
+
+/* ---------- unified circuit field: page-spanning, connects/disconnects, multiple flow points ---------- */
+.dragon-circuit-field {
   position: absolute;
-  inset: -8px;
-  border-radius: 50%;
-  background: radial-gradient(ellipse at center, rgba(41, 184, 214, 0.35), transparent 70%);
-  filter: blur(8px);
-  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.55;
+  pointer-events: none;
 }
-.dragon-eye3d-canvas {
-  width: 100px;
-  height: 100px;
-  margin: -18px 0 0 -18px;
-  filter: hue-rotate(193deg) saturate(1.25) brightness(1.05);
-  clip-path: ellipse(42% 26% at 50% 50%);
-  -webkit-clip-path: ellipse(42% 26% at 50% 50%);
+.dc-line {
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  opacity: 0.55;
+}
+.dc-line--thin { stroke-width: 1; opacity: 0.35; }
+
+.dc-line--flow {
+  stroke: var(--dragon-accent);
+  stroke-dasharray: 10 18;
+  animation: dc-flow-up 2s linear infinite;
+  filter: drop-shadow(0 0 4px rgba(41, 184, 214, 0.7));
+}
+@keyframes dc-flow-up {
+  from { stroke-dashoffset: 56; }
+  to { stroke-dashoffset: 0; }
+}
+
+.dc-line--purple {
+  stroke: var(--dragon-accent-purple);
+  animation: dragon-pulse 4.5s ease-in-out infinite;
+}
+.dc-line--yellow {
+  stroke: var(--dragon-accent-yellow);
+  animation: dragon-pulse 4.5s ease-in-out infinite 1.3s;
+}
+
+.dc-node { animation: dragon-pulse 3.8s ease-in-out infinite; }
+.dc-node--blue {
+  fill: var(--dragon-accent);
+  filter: drop-shadow(0 0 6px rgba(41, 184, 214, 0.8));
+}
+.dc-node--purple { fill: var(--dragon-accent-purple); animation-delay: 1s; }
+.dc-node--yellow { fill: var(--dragon-accent-yellow); animation-delay: 2s; }
+
+@media (max-width: 900px) {
+  .dragon-circuit-field { display: none; }
+}
+
+/* ---------- single floating 3D eye, placed near The Hoard ---------- */
+.dragon-hoard-with-eye {
+  position: relative;
+}
+.dragon-eye-floating {
+  position: absolute;
+  top: -60px;
+  right: 6%;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+.dragon-eye-floating--active { opacity: 1; }
+.dragon-eye-floating-canvas {
+  width: 140px;
+  height: 140px;
+  filter: hue-rotate(193deg) saturate(1.25) brightness(1.05)
+    drop-shadow(0 0 16px rgba(41, 184, 214, 0.5));
+  clip-path: ellipse(42% 30% at 50% 50%);
+  -webkit-clip-path: ellipse(42% 30% at 50% 50%);
+}
+
+@media (max-width: 900px) {
+  .dragon-eye-floating { display: none; }
 }
