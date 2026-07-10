@@ -1,98 +1,200 @@
-# Portfolio v2
+# Realm II
+# The Cosmos Realm
 
-A modern portfolio website showcasing my projects, experience, and journey in AI, Machine Learning, and Full-Stack Development.
+> "Every project begins as an idea.
+> Every idea deserves its own universe."
 
-## About
+Theme:
+Space
+Nebulas
+Stars
+Galaxies
+Black Holes
+Futuristic Space Stations
+Holographic Technology
 
-Hi, I'm **Arbind Malava**, a B.Tech Computer Science student specializing in Robotics and Artificial Intelligence.
+This realm represents my ability to transform knowledge into production-ready systems.
 
-I enjoy exploring and building systems that combine AI and software engineering. My interests include:
+Every major project exists as its own planet, station, or celestial body inside an ever-expanding digital universe.
 
-- Large Language Models (LLMs)
-- Natural Language Processing
-- Machine Learning
-- Full-Stack Development
-- Intelligent Systems
+Rather than displaying projects as ordinary cards, visitors travel through space discovering each creation.
 
----
-
-## Featured Projects
-
-### 🧠 PolicyLens
-AI-powered document intelligence platform built with Llama 3.1 and FAISS for summarization and question answering.
-
-### 🌍 Horizon
-Personality development platform using local LLMs to recommend content and encourage reflective growth.
-
-### ✈️ Travel Planning App
-Generates optimized travel itineraries using route optimization algorithms and user preferences.
-
-### 🚁 Drone Assembly
-My first hardware project where I learned how different drone components work together, including motors, ESCs, propellers, and flight controllers.
+Each completed project becomes another star in my universe.
 
 ---
 
-## Tech Stack
+## Contains
 
-### Frontend
-- React
-- Vite
-- Tailwind CSS
+### Major Projects
 
-### Languages
-- Python
-- JavaScript
-- C++
+Examples
 
-### AI/ML
-- PyTorch
-- Llama 3.1
-- FAISS
-- NLP
+AI Interview Preparation Platform
 
-### Tools
-- Git
-- GitHub
-- VS Code
+Virtual Line Following Robot
 
----
+Travel Itinerary Optimizer
 
-## Live Website
+Face Recognition System
 
-Coming Soon
+Forecasting Models
+
+Computer Vision Projects
+
+Machine Learning Projects
+
+Robotics Projects
+
+Full Stack Applications
 
 ---
 
-## Installation
+## Every Project Contains
 
-```bash
-git clone https://github.com/arbind0705/portfolio-v2.git
+Overview
 
-cd portfolio-v2
+Problem Statement
 
-npm install
+Architecture
 
-npm run dev
-```
+Research
+
+System Design
+
+Tech Stack
+
+Challenges
+
+Implementation
+
+Performance
+
+Results
+
+Future Scope
+
+GitHub
+
+Live Demo
+
+Research Papers
+
+Videos
+
+Screenshots
+
+Performance Metrics
 
 ---
 
-## Philosophy
+## Universe Navigation
 
-> I like to explore and grow as I build.
+Every project is represented differently.
 
-Every project teaches me something new, and I believe learning happens best through experimentation and curiosity.
+🪐 Planet
+
+Large complete applications
+
+🌙 Moon
+
+Supporting modules
+
+☄️ Asteroid
+
+Experiments
+
+⭐ Star
+
+Achievements
+
+🛰 Satellite
+
+APIs
+
+🌌 Nebula
+
+Research Ideas
+
+🕳 Black Hole
+
+Failed Experiments & Lessons Learned
 
 ---
 
-## Connect With Me
+## Interactive Journey
 
-LinkedIn:
-www.linkedin.com/in/arbind-malava-08a7b1283
+Visitors pilot a small spacecraft through the universe.
 
-GitHub:
-https://github.com/arbind0705
+As they approach a planet:
 
-Email:
-arbindmalava@gmail.com
-```
+• the camera smoothly zooms in
+
+• project information appears as holographic panels
+
+• satellites begin orbiting
+
+• constellations connect related projects
+
+---
+
+## Space Station
+
+A futuristic orbital station contains
+
+Resume
+
+Publications
+
+Certifications
+
+Achievements
+
+Open Source Contributions
+
+GitHub Statistics
+
+---
+
+## Technology Constellation
+
+Every technology becomes a star.
+
+Examples
+
+React
+
+Next.js
+
+Python
+
+TensorFlow
+
+PyTorch
+
+ROS
+
+OpenCV
+
+Docker
+
+AWS
+
+FastAPI
+
+MongoDB
+
+PostgreSQL
+
+Connections between stars represent technologies used together.
+
+---
+
+## Mission Timeline
+
+Instead of a traditional timeline...
+
+A galaxy slowly expands.
+
+Each completed project lights up another star.
+
+Visitors can watch my journey from the first project to the most recent one.
