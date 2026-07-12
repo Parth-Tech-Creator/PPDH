@@ -9,7 +9,7 @@
  */
 
 export const profile = {
-  name: 'Alex Rivera',
+  name: 'Arbind Malava',
   role: 'Robotics & AI Engineer',
   tagline: 'I Build Intelligent Systems.',
   subtitleWords: [
@@ -22,7 +22,7 @@ export const profile = {
   bio: `Systems engineer working at the intersection of perception and
     autonomy — training models that see, robots that move, and the
     full-stack platforms that put both in someone's hands.`,
-  location: 'San Francisco, CA',
+  location: 'mohali, punjab',
   availability: 'Open to research & engineering roles',
 };
 
@@ -39,7 +39,7 @@ export const socials = {
   github: 'https://github.com/your-handle',
   githubUsername: 'your-handle', // used to pull live stats on the Space Station
   linkedin: 'https://linkedin.com/in/your-handle',
-  email: 'hello@example.com',
+  email: 'arbindmalava.com',
   resumeUrl: '/resume.pdf',
 };
 
