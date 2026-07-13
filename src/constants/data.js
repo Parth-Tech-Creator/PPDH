@@ -9,21 +9,23 @@
  */
 
 export const profile = {
-  name: 'Alex Rivera',
+  name: 'Parth',
   role: 'Robotics & AI Engineer',
-  tagline: 'I Build Intelligent Systems.',
+  tagline: 'Engineering Intelligent Systems for the Future.',
   subtitleWords: [
     'Robotics',
     'Artificial Intelligence',
-    'Machine Learning',
     'Computer Vision',
+    'Machine Learning',
     'Full-Stack Development',
   ],
-  bio: `Systems engineer working at the intersection of perception and
-    autonomy — training models that see, robots that move, and the
-    full-stack platforms that put both in someone's hands.`,
-  location: 'San Francisco, CA',
-  availability: 'Open to research & engineering roles',
+  bio: `I'm a Robotics & AI undergraduate passionate about building intelligent
+systems that bridge software and the physical world. My interests span
+computer vision, autonomous robotics, AI-powered applications, full-stack
+development and simulation. Every project I build is another step toward
+creating intelligent machines capable of solving real-world problems.`,
+  location: 'Mohali, Punjab, India',
+  availability: 'Open to Internships, Research Opportunities & Collaboration',
 };
 
 export const navLinks = [
@@ -36,10 +38,10 @@ export const navLinks = [
 ];
 
 export const socials = {
-  github: 'https://github.com/your-handle',
-  githubUsername: 'your-handle', // used to pull live stats on the Space Station
-  linkedin: 'https://linkedin.com/in/your-handle',
-  email: 'hello@example.com',
+  github: 'https://github.com/Parth-Tech-Creator',
+  githubUsername: 'Parth-Tech-Creator',
+  linkedin: 'https://www.linkedin.com/in/parth-2a4607349/',
+  email: 'parth.321.06@gmail.com',
   resumeUrl: '/resume.pdf',
 };
 
@@ -50,74 +52,107 @@ export const socials = {
  */
 export const projects = [
   {
-    id: 'vision-nav',
-    name: 'VisionNav',
-    tagline: 'Monocular SLAM for warehouse drones',
+    id: 'policylens',
+    name: 'PolicyLens',
+    tagline: 'AI powered policy analysis platform',
     description:
-      'A real-time visual-inertial SLAM stack that lets low-cost drones navigate GPS-denied warehouses using a single camera and an IMU, cutting mapping hardware cost by 80%.',
-    tech: ['Python', 'OpenCV', 'ROS', 'PyTorch'],
-    github: 'https://github.com/your-handle/vision-nav',
-    demo: 'https://example.com/vision-nav',
-    accent: '#8b5cf6',
+      'An intelligent platform that simplifies complex government policies and documents using AI-powered summarization, semantic search and contextual explanations.',
+    tech: [
+      'React',
+      'FastAPI',
+      'Python',
+      'LLMs',
+      'RAG',
+      'MongoDB'
+    ],
+    github: '',
+    demo: '',
+    accent: '#7c5cff',
     size: 1.15,
-    orbitRadius: 165,
-    orbitDuration: 34,
+    orbitRadius: 170,
+    orbitDuration: 36,
   },
+
   {
-    id: 'gesture-arm',
-    name: 'GestureArm',
-    tagline: '6-DOF robotic arm, gesture-controlled',
+    id: 'horizon',
+    name: 'Horizon',
+    tagline: 'AI learning & exploration platform',
     description:
-      'A teleoperation pipeline that maps a operator\'s hand pose — tracked with a depth camera and a lightweight CNN — onto a 6-degree-of-freedom robotic arm in under 40ms of latency.',
-    tech: ['Python', 'TensorFlow', 'OpenCV', 'ROS'],
-    github: 'https://github.com/your-handle/gesture-arm',
-    demo: 'https://example.com/gesture-arm',
-    accent: '#22d3ee',
-    size: 0.95,
-    orbitRadius: 240,
-    orbitDuration: 48,
-  },
-  {
-    id: 'orbit-api',
-    name: 'Orbit API',
-    tagline: 'ML inference platform for edge devices',
-    description:
-      'A FastAPI-based model-serving layer with automatic quantization and batching, built to run vision models on Jetson-class edge hardware at sub-100ms latency.',
-    tech: ['FastAPI', 'Docker', 'AWS', 'PyTorch'],
-    github: 'https://github.com/your-handle/orbit-api',
-    demo: 'https://example.com/orbit-api',
-    accent: '#4f7cff',
+      'A platform designed to help students discover educational content, learn through AI-guided experiences and broaden their perspectives using personalized recommendations.',
+    tech: [
+      'React',
+      'Node.js',
+      'Firebase',
+      'Python'
+    ],
+    github: '',
+    demo: '',
+    accent: '#2bd5ff',
     size: 1.05,
-    orbitRadius: 315,
-    orbitDuration: 62,
+    orbitRadius: 250,
+    orbitDuration: 52,
   },
+
   {
-    id: 'swarm-sim',
-    name: 'SwarmSim',
-    tagline: 'Multi-agent reinforcement learning sandbox',
+    id: 'drone',
+    name: 'Autonomous Drone',
+    tagline: 'Simulation driven intelligent drone',
     description:
-      'A browser-based simulator for training and visualizing swarms of reinforcement-learning agents cooperating on search-and-rescue tasks, with live reward-shaping controls.',
-    tech: ['React', 'Python', 'PyTorch', 'MongoDB'],
-    github: 'https://github.com/your-handle/swarm-sim',
-    demo: 'https://example.com/swarm-sim',
-    accent: '#a78bfa',
-    size: 0.9,
-    orbitRadius: 390,
-    orbitDuration: 76,
+      'A robotics project focused on autonomous drone navigation using ROS2, Gazebo, computer vision and AI for real-world applications.',
+    tech: [
+      'ROS2',
+      'Gazebo',
+      'Python',
+      'OpenCV',
+      'YOLO'
+    ],
+    github: '',
+    demo: '',
+    accent: '#4a8dff',
+    size: 1.08,
+    orbitRadius: 330,
+    orbitDuration: 68,
   },
+
   {
-    id: 'sentry-cv',
-    name: 'SentryCV',
-    tagline: 'On-device anomaly detection for CCTV',
+    id: 'maga',
+    name: 'MAGA',
+    tagline: 'Multi-Agent Generative AI Platform',
     description:
-      'A self-supervised anomaly detection model that runs entirely on-camera, flagging unusual activity without ever streaming raw video off-device — built for privacy-sensitive deployments.',
-    tech: ['TensorFlow', 'OpenCV', 'Docker'],
-    github: 'https://github.com/your-handle/sentry-cv',
-    demo: 'https://example.com/sentry-cv',
-    accent: '#67e8f9',
+      'An experimental multi-agent AI ecosystem where specialized agents collaborate to solve complex tasks using reasoning, planning and tool execution.',
+    tech: [
+      'Python',
+      'LangChain',
+      'LLMs',
+      'FastAPI',
+      'Docker'
+    ],
+    github: '',
+    demo: '',
+    accent: '#b58cff',
+    size: 0.95,
+    orbitRadius: 410,
+    orbitDuration: 82,
+  },
+
+  {
+    id: 'simpleworld',
+    name: 'Simple World',
+    tagline: 'Intelligent virtual ecosystem',
+    description:
+      'A simulated virtual environment where autonomous AI entities learn, interact and evolve through environmental feedback and intelligent decision making.',
+    tech: [
+      'Python',
+      'Unity / Godot',
+      'Machine Learning',
+      'Simulation'
+    ],
+    github: '',
+    demo: '',
+    accent: '#78e7ff',
     size: 1.0,
-    orbitRadius: 460,
-    orbitDuration: 92,
+    orbitRadius: 490,
+    orbitDuration: 95,
   },
 ];
 
@@ -214,46 +249,43 @@ export const techStack = [
  */
 export const timeline = [
   {
-    id: 'log-01',
-    date: '2022',
-    title: 'Started B.S. in Robotics Engineering',
-    description:
-      'Began formal study in kinematics, controls, and embedded systems while building small autonomous rovers on the side.',
-  },
-  {
-    id: 'log-02',
-    date: '2023',
-    title: 'First computer vision internship',
-    description:
-      'Shipped a defect-detection model to a manufacturing line, cutting manual inspection time by a third.',
-  },
-  {
-    id: 'log-03',
+    id: '01',
     date: '2024',
-    title: 'Published SLAM research',
+    title: 'Started B.Tech in Robotics & AI',
     description:
-      'Co-authored a paper on low-cost visual-inertial SLAM for indoor drones, presented at a regional robotics workshop.',
+      'Began my journey into robotics, programming, artificial intelligence and autonomous systems.',
   },
+
   {
-    id: 'log-04',
+    id: '02',
     date: '2025',
-    title: 'Built GestureArm',
+    title: 'Explored Computer Vision',
     description:
-      'Designed and shipped a real-time gesture-teleoperation pipeline for a 6-DOF robotic arm.',
+      'Built projects involving face recognition, object detection and image processing while learning OpenCV and deep learning fundamentals.',
   },
+
   {
-    id: 'log-05',
+    id: '03',
     date: '2025',
-    title: 'Joined an applied-AI research team',
+    title: 'Full Stack & AI Development',
     description:
-      'Moved from side projects to production, deploying edge inference models at scale.',
+      'Started building complete AI-powered web applications integrating React, backend APIs and machine learning models.',
   },
+
   {
-    id: 'log-06',
+    id: '04',
     date: '2026',
-    title: 'Launched Orbit API',
+    title: 'Building Intelligent Systems',
     description:
-      'Released an open-source model-serving layer purpose-built for edge hardware.',
+      'Started developing larger production-oriented projects focused on robotics, autonomous systems and intelligent applications.',
+  },
+
+  {
+    id: '05',
+    date: 'Future',
+    title: 'Research & Robotics',
+    description:
+      'Working toward research in autonomous robotics, AI systems and real-world deployment while preparing for graduate studies.',
     current: true,
   },
 ];
@@ -283,17 +315,22 @@ export const about = {
   ],
   education: [
     {
-      degree: 'B.S. Robotics Engineering',
-      school: 'State Institute of Technology',
-      period: '2022 — 2026',
+      degree: 'B.Tech in Robotics & Artificial Intelligence',
+      school: 'Chandigarh Engineering College, Jhanjeri',
+      period: '2024 – Present',
     },
   ],
   researchInterests: [
-    'Visual-Inertial SLAM',
-    'Sim-to-Real Transfer',
-    'Multi-Agent RL',
-    'Edge Model Compression',
+    'Robotics',
+    'Computer Vision',
+    'Autonomous Systems',
+    'Drone Navigation',
     'Human-Robot Interaction',
+    'Machine Learning',
+    'Artificial Intelligence',
+    'ROS2',
+    'Simulation',
+    'Multi-Agent Systems',
   ],
 };
 
