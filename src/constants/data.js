@@ -42,7 +42,7 @@ export const socials = {
   githubUsername: 'Parth-Tech-Creator',
   linkedin: 'https://www.linkedin.com/in/parth-2a4607349/',
   email: 'parth.321.06@gmail.com',
-  resumeUrl: '/resume.pdf',
+  resumeUrl: '/projects/Arbind_Resume.pdf',
 };
 
 /**
