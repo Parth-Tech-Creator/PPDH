@@ -44,3 +44,4 @@ The original brief asked for dozens of narrowly-split files (one per micro-anima
 ## Stack
 
 React 19 · Vite 8 · Tailwind CSS v4 · @react-three/fiber v9 · @react-three/drei v10 · @react-three/postprocessing v3 · Framer Motion 12 · GSAP 3 · Lenis · react-icons
+relm 2 clockwork world
